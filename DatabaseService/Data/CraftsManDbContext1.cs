@@ -81,7 +81,7 @@ namespace DatabaseService.Data
             modelBuilder.Entity<ToolBox>().HasData(
                 new ToolBox
                 {
-                    Owner = jId,
+                    OwnerId = jId,
                     Acquired = DateTime.Today,
                     Brand = "redBox",
                     Model = "bigBox",
@@ -91,7 +91,7 @@ namespace DatabaseService.Data
                 },
                 new ToolBox
                 {
-                    Owner = mId,
+                    OwnerId = mId,
                     Acquired = DateTime.Today,
                     Brand = "blackBox",
                     Model = "smallBox",
@@ -109,7 +109,7 @@ namespace DatabaseService.Data
                     SerialNumber = "11000",
                     Model = "7",
                     Id = Guid.NewGuid(),
-                    ToolBox = redBoxId
+                    ToolBoxId = redBoxId
                 },
                 new Tool {
                     Acquired = DateTime.Today,
@@ -118,7 +118,7 @@ namespace DatabaseService.Data
                     SerialNumber = "00111",
                     Model = "4",
                     Id = Guid.NewGuid(),
-                    ToolBox = blackBoxId
+                    ToolBoxId = blackBoxId
                 }
             );
         }
